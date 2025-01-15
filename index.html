@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .attendance-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .attendance-table th, .attendance-table td {
+            border: 1px solid #ddd;
+            text-align: center;
+            padding: 8px;
+        }
+        .attendance-table th {
+            background-color: #4CAF50;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+        .name-column {
+            background-color: #f9f9f9;
+            font-weight: bold;
+            text-align: left;
+        }
+        .check {
+            color: green;
+            font-size: 18px;
+        }
+        .cross {
+            color: red;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Attendance Table</h1>
+    <table class="attendance-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <!-- Generate 31 days -->
+                <script>
+                    for (let i = 1; i <= 31; i++) {
+                        document.write(`<th>${i}</th>`);
+                    }
+                </script>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Sample names -->
+            <script>
+                const names = ["Somasiri", "Selva", "Lahiru", "Amith", "Nasim", "Kamal", "Ravi", "Sunil", "Thilini", "Kavinda"];
+
+                // Generate rows for each name
+                names.forEach(name => {
+                    document.write('<tr>');
+                    document.write(`<td class="name-column">${name}</td>`);
+
+                    for (let i = 1; i <= 31; i++) {
+                        const isPresent = Math.random() > 0.1; // Randomly mark attendance (90% chance of being present)
+                        const checkbox = `<input type="checkbox" ${isPresent ? 'checked' : ''}>`;
+                        document.write(`<td>${checkbox}</td>`);
+                    }
+
+                    document.write('</tr>');
+                });
+            </script>
+        </tbody>
+    </table>
+</body>
+</html>
