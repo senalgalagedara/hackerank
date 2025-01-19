@@ -65,6 +65,7 @@ public class Solution {
             else if(i==myStack.capacity-1){
                 break;
             }
+            sc.close();
     }
 }
 }

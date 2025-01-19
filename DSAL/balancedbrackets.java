@@ -32,6 +32,7 @@ public class balancedbrackets {
             }
             nextnum = 0;
         }
+        userin.close();
     }
 }
 // uda ek wrdi

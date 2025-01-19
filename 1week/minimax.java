@@ -32,5 +32,6 @@ public class minimax {
             }
         }
         System.out.println(min + " " + max);
+        userin.close();
     }
 }

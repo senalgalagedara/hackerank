@@ -38,5 +38,6 @@ public static void main(String[] arg)
     System.out.println((float)pos/n);
     System.out.println((float)neg/n);
     System.out.println((float)zero/n);
+    userin.close();
 }
 }
