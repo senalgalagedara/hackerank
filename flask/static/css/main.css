@@ -1,4 +1,16 @@
 body
 {
-    background-color: aqua;
+}
+.content{
+    width: 60%;
+    margin: auto;
+    display: block;
+}
+table
+{
+    border: 1px solid black;
+}
+td,th
+{
+    border: 1px solid black;
 }
