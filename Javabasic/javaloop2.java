@@ -22,7 +22,7 @@ public class javaloop2 {
                 sum2= (2^j) * b;
             }
             sum = a + sum2;
-            System.out.println(sum);
+            System.out.print(sum);
         }
     in.close();
 }
